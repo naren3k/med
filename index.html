@@ -2,87 +2,90 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Quiz XML Renderer</title>
+<title>Quiz Questions + Correct Answers</title>
 <style>
   body { font-family: Arial; padding: 20px; background: #f5f5f5; }
-  .question { background: #fff; padding: 16px; margin-bottom: 12px; border-radius: 10px; border: 1px solid #ddd; }
-  .question h3 { margin-top: 0; }
-  .answer { padding: 8px; border-radius: 6px; margin: 4px 0; border: 1px solid #ddd; }
-  .answer.correct { background: #d9f2d9; border-color: #5cb85c; }
+  .qa-block { background: #fff; padding: 16px; margin-bottom: 12px; border-radius: 10px; border: 1px solid #ddd; }
+  .qa-block strong { display: inline-block; width: 80px; }
 </style>
 </head>
 <body>
 
-<h2>Quiz Renderer</h2>
+<h2>Quiz Questions with Correct Answers</h2>
 
 <div>
-  <input id="xmlUrl" type="text" value="https://naren3k.github.io/med/medborgerskabsproeven-may-2025.xml" style="width: 80%;" />
+  <label for="xmlSelect">Select Quiz XML:</label>
+  <select id="xmlSelect">
+    <option value="/medborgerskabsproeven-may-2025.xml">May 2025 Quiz</option>
+    <!-- Add more options here later -->
+  </select>
   <button onclick="loadQuiz()">Load Quiz</button>
 </div>
 
-<div id="status" style="margin: 10px 0; color: #666;"></div>
-
-<div id="quiz"></div>
+<div id="status" style="margin:10px 0; color:#666;"></div>
+<div id="results"></div>
 
 <script>
 async function loadQuiz() {
-  const url = document.getElementById("xmlUrl").value;
+  const url = document.getElementById("xmlSelect").value;
+  const resultsDiv = document.getElementById("results");
+  resultsDiv.innerHTML = '';
   document.getElementById("status").innerText = "Fetching XML…";
 
   try {
     const res = await fetch(url);
     if (!res.ok) throw new Error("HTTP " + res.status);
-
     const xmlText = await res.text();
     document.getElementById("status").innerText = "XML Loaded.";
 
-    renderQuiz(xmlText);
+    parseQuiz(xmlText);
 
   } catch (err) {
     document.getElementById("status").innerText = "Error fetching XML: " + err;
   }
 }
 
-function renderQuiz(xmlString) {
+function parseQuiz(xmlString) {
   const parser = new DOMParser();
   const xml = parser.parseFromString(xmlString, "text/xml");
-  const quizDiv = document.getElementById("quiz");
-  quizDiv.innerHTML = "";
+  const resultsDiv = document.getElementById("results");
+  resultsDiv.innerHTML = '';
 
-  const questions = xml.getElementsByTagName("question");
+  const questions = xml.querySelectorAll('question, item');
   if (!questions.length) {
-    quizDiv.innerHTML = "<p>No <question> tags found in XML.</p>";
+    resultsDiv.innerText = "No questions found in XML.";
     return;
   }
 
-  Array.from(questions).forEach((qNode, index) => {
-    const qDiv = document.createElement("div");
-    qDiv.className = "question";
+  questions.forEach((qNode, idx) => {
+    const qTextNode = qNode.querySelector('text, prompt');
+    const questionText = qTextNode ? qTextNode.textContent.trim() : `Question ${idx+1}`;
 
-    const textNode = qNode.getElementsByTagName("text")[0];
-    const qText = textNode ? textNode.textContent.trim() : "Question " + (index + 1);
+    let correctAnswer = '';
+    const failTextNode = qNode.querySelector('[id="fail"] > text');
+    if (failTextNode) {
+      failTextNode.childNodes.forEach(n => {
+        if (n.nodeType === Node.CDATA_SECTION_NODE) {
+          const tempDiv = document.createElement('div');
+          tempDiv.innerHTML = n.data;
+          const bTag = tempDiv.querySelector('b');
+          if (bTag) {
+            correctAnswer = bTag.textContent.replace(/^The correct answer is\s*:\s*/i,'').trim();
+          }
+        } else if (n.nodeType === Node.TEXT_NODE) {
+          correctAnswer = n.textContent.trim();
+        }
+      });
+    }
 
-    qDiv.innerHTML = `<h3>${index + 1}. ${qText}</h3>`;
-
-    const answers = qNode.getElementsByTagName("answer");
-    Array.from(answers).forEach((aNode, aIndex) => {
-      const aText = aNode.textContent.trim();
-      const isCorrect =
-        aNode.getAttribute("correct") === "true" ||
-        aNode.getAttribute("correct") === "1" ||
-        aNode.getAttribute("correct") === "yes";
-
-      const aDiv = document.createElement("div");
-      aDiv.className = "answer" + (isCorrect ? " correct" : "");
-      aDiv.innerText = String.fromCharCode(65 + aIndex) + ". " + aText;
-
-      qDiv.appendChild(aDiv);
-    });
-
-    quizDiv.appendChild(qDiv);
+    const qaDiv = document.createElement('div');
+    qaDiv.className = 'qa-block';
+    qaDiv.innerHTML = `<div><strong>Q:</strong> ${questionText}</div>
+                       <div><strong>A:</strong> ${correctAnswer || '[Not found]'}</div>`;
+    resultsDiv.appendChild(qaDiv);
   });
 
-  document.getElementById("status").innerText = "Rendered " + questions.length + " questions.";
+  document.getElementById("status").innerText = `Rendered ${questions.length} questions.`;
 }
 </script>
 
