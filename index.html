@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Quiz XML Renderer</title>
+<style>
+  body { font-family: Arial; padding: 20px; background: #f5f5f5; }
+  .question { background: #fff; padding: 16px; margin-bottom: 12px; border-radius: 10px; border: 1px solid #ddd; }
+  .question h3 { margin-top: 0; }
+  .answer { padding: 8px; border-radius: 6px; margin: 4px 0; border: 1px solid #ddd; }
+  .answer.correct { background: #d9f2d9; border-color: #5cb85c; }
+</style>
+</head>
+<body>
+
+<h2>Quiz Renderer</h2>
+
+<div>
+  <input id="xmlUrl" type="text" value="https://nearlydanish.com/medborgerskabsproeven/exams/medborgerskabsproeven-may-2025/?alttemplate=quizxml" style="width: 80%;" />
+  <button onclick="loadQuiz()">Load Quiz</button>
+</div>
+
+<div id="status" style="margin: 10px 0; color: #666;"></div>
+
+<div id="quiz"></div>
+
+<script>
+async function loadQuiz() {
+  const url = document.getElementById("xmlUrl").value;
+  document.getElementById("status").innerText = "Fetching XML…";
+
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error("HTTP " + res.status);
+
+    const xmlText = await res.text();
+    document.getElementById("status").innerText = "XML Loaded.";
+
+    renderQuiz(xmlText);
+
+  } catch (err) {
+    document.getElementById("status").innerText = "Error fetching XML: " + err;
+  }
+}
+
+function renderQuiz(xmlString) {
+  const parser = new DOMParser();
+  const xml = parser.parseFromString(xmlString, "text/xml");
+  const quizDiv = document.getElementById("quiz");
+  quizDiv.innerHTML = "";
+
+  const questions = xml.getElementsByTagName("question");
+  if (!questions.length) {
+    quizDiv.innerHTML = "<p>No <question> tags found in XML.</p>";
+    return;
+  }
+
+  Array.from(questions).forEach((qNode, index) => {
+    const qDiv = document.createElement("div");
+    qDiv.className = "question";
+
+    const textNode = qNode.getElementsByTagName("text")[0];
+    const qText = textNode ? textNode.textContent.trim() : "Question " + (index + 1);
+
+    qDiv.innerHTML = `<h3>${index + 1}. ${qText}</h3>`;
+
+    const answers = qNode.getElementsByTagName("answer");
+    Array.from(answers).forEach((aNode, aIndex) => {
+      const aText = aNode.textContent.trim();
+      const isCorrect =
+        aNode.getAttribute("correct") === "true" ||
+        aNode.getAttribute("correct") === "1" ||
+        aNode.getAttribute("correct") === "yes";
+
+      const aDiv = document.createElement("div");
+      aDiv.className = "answer" + (isCorrect ? " correct" : "");
+      aDiv.innerText = String.fromCharCode(65 + aIndex) + ". " + aText;
+
+      qDiv.appendChild(aDiv);
+    });
+
+    quizDiv.appendChild(qDiv);
+  });
+
+  document.getElementById("status").innerText = "Rendered " + questions.length + " questions.";
+}
+</script>
+
+</body>
+</html>
