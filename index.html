@@ -8,6 +8,14 @@
   .block { background:#f7f7f7; padding:15px; margin-bottom:15px; border-radius:8px; }
   pre { white-space: pre-wrap; }
 </style>
+<script>
+  const password = "itsnotme"; // change to your password
+
+  const userInput = prompt("Enter password:");
+  if (userInput !== password) {
+    document.body.innerHTML = "Access denied.";
+  }
+</script>
 </head>
 <body>
 
