@@ -2,90 +2,114 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Quiz Questions + Correct Answers</title>
+<title>Quiz Parser</title>
 <style>
-  body { font-family: Arial; padding: 20px; background: #f5f5f5; }
-  .qa-block { background: #fff; padding: 16px; margin-bottom: 12px; border-radius: 10px; border: 1px solid #ddd; }
-  .qa-block strong { display: inline-block; width: 80px; }
+  body { font-family: Arial; padding:20px;}
+  .block { background:#f7f7f7; padding:15px; margin-bottom:15px; border-radius:8px; }
+  pre { white-space: pre-wrap; }
 </style>
 </head>
 <body>
 
-<h2>Quiz Questions with Correct Answers</h2>
+<h2>Quiz Questions + Options + Correct Answer</h2>
 
-<div>
-  <label for="xmlSelect">Select Quiz XML:</label>
-  <select id="xmlSelect">
-    <option value="/med/medborgerskabsproeven-may-2025.xml">May 2025 Quiz</option>
-    <!-- Add more options here later -->
-  </select>
-  <button onclick="loadQuiz()">Load Quiz</button>
-</div>
+<select id="xmlSelect">
+  <option value="/med/medborgerskabsproeven-may-2025.xml">May 2025 Quiz</option>
+</select>
+<button onclick="loadQuiz()">Load</button>
 
-<div id="status" style="margin:10px 0; color:#666;"></div>
 <div id="results"></div>
 
 <script>
 async function loadQuiz() {
   const url = document.getElementById("xmlSelect").value;
-  const resultsDiv = document.getElementById("results");
-  resultsDiv.innerHTML = '';
-  document.getElementById("status").innerText = "Fetching XML…";
+  const results = document.getElementById("results");
+  results.innerHTML = "Loading...";
 
-  try {
-    const res = await fetch(url);
-    if (!res.ok) throw new Error("HTTP " + res.status);
-    const xmlText = await res.text();
-    document.getElementById("status").innerText = "XML Loaded.";
+  const res = await fetch(url);
+  const xmlText = await res.text();
 
-    parseQuiz(xmlText);
-
-  } catch (err) {
-    document.getElementById("status").innerText = "Error fetching XML: " + err;
-  }
+  parseQuiz(xmlText);
 }
 
 function parseQuiz(xmlString) {
-  const parser = new DOMParser();
-  const xml = parser.parseFromString(xmlString, "text/xml");
-  const resultsDiv = document.getElementById("results");
-  resultsDiv.innerHTML = '';
+  const xml = new DOMParser().parseFromString(xmlString, "text/xml");
+  const results = document.getElementById("results");
+  results.innerHTML = "";
 
-  const questions = xml.querySelectorAll('question, item');
-  if (!questions.length) {
-    resultsDiv.innerText = "No questions found in XML.";
-    return;
-  }
+  const questions = xml.querySelectorAll("question");
 
-  questions.forEach((qNode, idx) => {
-    const qTextNode = qNode.querySelector('text, prompt');
-    const questionText = qTextNode ? qTextNode.textContent.trim() : `Question ${idx+1}`;
+  questions.forEach((qNode, index) => {
 
-    let correctAnswer = '';
-    const failTextNode = qNode.querySelector('[id="fail"] > text');
-    if (failTextNode) {
-      failTextNode.childNodes.forEach(n => {
-        if (n.nodeType === Node.CDATA_SECTION_NODE) {
-          const tempDiv = document.createElement('div');
-          tempDiv.innerHTML = n.data;
-          const bTag = tempDiv.querySelector('b');
-          if (bTag) {
-            correctAnswer = bTag.textContent.replace(/^The correct answer is\s*:\s*/i,'').trim();
-          }
-        } else if (n.nodeType === Node.TEXT_NODE) {
-          correctAnswer = n.textContent.trim();
-        }
-      });
+    /* ────────────────────────────────
+       1️⃣ Extract QUESTION TEXT
+       ────────────────────────────────*/
+    let questionText = "";
+    const qTextNode = qNode.querySelector('text[id="question"]');
+
+    if (qTextNode) {
+      questionText = extractPlainText(qTextNode);
     }
 
-    const qaDiv = document.createElement('div');
-    qaDiv.className = 'qa-block';
-    qaDiv.innerHTML = `<div><strong>Q:</strong> ${questionText}</div>
-                       <div><strong>A:</strong> ${correctAnswer || '[Not found]'}</div>`;
-    resultsDiv.appendChild(qaDiv);
+    /* ────────────────────────────────
+       2️⃣ Extract OPTIONS
+       ────────────────────────────────*/
+    let options = [];
+    qNode.querySelectorAll("option text").forEach(optNode => {
+      options.push(extractPlainText(optNode));
+    });
+
+    /* ────────────────────────────────
+       3️⃣ Extract CORRECT ANSWER from <fb id="fail">
+       ────────────────────────────────*/
+    let correctAnswer = "";
+    const failNode = qNode.querySelector('fb[id="fail"] text');
+
+    if (failNode) {
+      const html = extractPlainText(failNode);
+
+      // The CDATA contains: "The correct answer is : Arbejdstid"
+      const match = html.match(/The correct answer is\s*:\s*(.+)/i);
+      if (match) correctAnswer = match[1].trim();
+    }
+
+    /* ────────────────────────────────
+       RENDER BLOCK
+       ────────────────────────────────*/
+    const block = document.createElement("div");
+    block.className = "block";
+
+    block.innerHTML = `
+      <pre>
+<b>Q${index+1}:</b> ${questionText}
+
+<b>Options:</b>
+${options.map(o => "  - " + o).join("\n")}
+
+<b>Answer:</b> ${correctAnswer}
+      </pre>
+    `;
+
+    results.appendChild(block);
+  });
+}
+
+/* Utility: extract plain text from CDATA containing HTML */
+function extractPlainText(node) {
+  let text = "";
+
+  node.childNodes.forEach(n => {
+    if (n.nodeType === Node.CDATA_SECTION_NODE) {
+      const temp = document.createElement("div");
+      temp.innerHTML = n.data;
+      text += temp.textContent.trim();
+    }
+    if (n.nodeType === Node.TEXT_NODE) {
+      text += n.textContent.trim();
+    }
   });
 
-  document.getElementById("status").innerText = `Rendered ${questions.length} questions.`;
+  return text.trim();
 }
 </script>
 
