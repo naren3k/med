@@ -1,0 +1,3336 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+
+
+<data>
+
+    <events>
+	<event id="screenloaded">
+		<click>
+			<function name="begin">this</function>
+		</click>
+	</event>
+
+	<event id="btnover">
+		<rollover>
+			<css add="btnOver">this</css>
+		</rollover>
+
+		<rollout>
+			<css remove="btnOver">this</css>
+		</rollout>
+	</event>
+
+	<event id="optionover">
+		<rollover>
+			<css add="optionOver">this</css>
+		</rollover>
+
+		<rollout>
+			<css remove="optionOver">this</css>
+		</rollout>
+
+		<click>
+			<css add="optionOver">this</css>
+		</click>
+	</event>
+
+	<event id="imgover">
+		<rollover>
+			<css name="imgOver">this</css>
+		</rollover>
+
+		<rollout>
+			<css name="imgOut">this</css>
+		</rollout>
+
+		<click>
+			<css name="imgOver">this</css>
+		</click>
+	</event>
+
+	<event id="select">
+		<click>
+			<function name="select">this</function>
+		</click>
+	</event>
+
+	<event id="selectandsubmit">
+		<click>
+			<function name="select">this</function>
+			<function name="submit">this</function>
+		</click>
+	</event>
+
+	<event id="submit">
+		<click>
+			<function name="submit">this</function>
+		</click>
+	</event>
+
+	<event id="reset">
+		<click>
+			<function name="reset">this</function>
+		</click>
+	</event>
+
+	<event id="sca">
+		<click>
+			<function name="sca">this</function>
+		</click>
+	</event>
+
+	<event id="loadNextQuestion">
+		<click>
+			<function name="loadNextQuestion">this</function>
+		</click>
+	</event>
+
+	<event id="restart">
+		<click>
+			<function name="restart">this</function>
+		</click>
+	</event>
+
+	<event id="sendResult">
+		<click>
+			<function name="sendResultsToGoogle" />
+		</click>
+	</event>
+	<event id="sendResultJSON">
+		<click>
+			<function name="sendResultJSON" />
+		</click>
+	</event>
+
+	<event id="loadAnotherPage">
+		<click>
+			<url address="http://www.essemble.co.uk" window="true">this</url>
+		</click>
+	</event>
+</events>    
+
+<!--timer-->
+<div id="timerContainer" anim="none" class="timerContainer text-center text-muted"/>
+
+<!--quiz-->
+   
+
+    <!--quiz-->
+    <custom type="quiz" id="quiz" width="100%">
+        <settings cheatmode="false" timer="false" radiobutton="false" radiobuttonx="10" radiobuttony="10" correctx="calc(100% - 30px)" correcty="5" attempts="1" />
+
+        
+
+            <question id="14026" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvilken rettighed er sikret i grundloven?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14027" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Retten til at holde ferie</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14028" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Retten til at eje jagtv&#229;ben</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14029" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Retten til at ytre sig</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Retten til at ytre sig</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14030" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvilken dansk film vandt en Oscar i 2021?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14031" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Festen</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14032" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Druk</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14033" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Jagten</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Druk</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14034" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvad var baggrunden for Kanslergadeforliget i 1933?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14035" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Integrationsproblemer</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14036" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Milj&#248;problemer</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14037" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>&#216;konomiske problemer</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : &#216;konomiske problemer</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14038" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvad hedder Kronprins Frederiks og Kronprinsesse Marys &#230;ldste s&#248;n?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14039" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Christian</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14040" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Joachim</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14041" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Nikolai</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Christian</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14042" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">I hvilket &#229;rhundrede blev England erobret af den danske konge Svend Tvesk&#230;g?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14043" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>1000-tallet</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14044" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>1300-tallet</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14045" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>1600-tallet</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : 1000-tallet</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14046" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvad fik videnskabsmanden Niels Bohr Nobelprisen for i 1922?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14047" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>En metode til m&#229;ling af lysets hastighed</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14048" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>En model over atomers opbygning</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14049" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>En teori om jordens magnetfelt</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : En model over atomers opbygning</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14050" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvilket af f&#248;lgende partier har haft statsministerposten i sammenlagt flest &#229;r siden Systemskiftet i 1901?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14051" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Venstre</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14052" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Det Konservative Folkeparti</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Venstre</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14053" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvor lang var middellevetiden for m&#230;nd i 2020-2021?</p>
+                        
+                            <span class="d-inline-block my-2 px-2 rounded bg-success font-size-sm text-uppercase text-white">Potential new question</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14054" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Cirka 73 &#229;r</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14055" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Cirka 80 &#229;r</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14056" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Cirka 87 &#229;r</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Cirka 80 &#229;r</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14057" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvad hedder den nordiske organisation, der varetager samarbejdet mellem de nordiske landes parlamenter?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14058" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Den Nordiske Union</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14059" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Nordtinget</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14060" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Nordisk R&#229;d</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Nordisk R&#229;d</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14061" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvilket land blev Dansk Vestindien solgt til i 1917?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14062" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Frankrig</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14063" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>USA</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14064" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Storbritannien</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : USA</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14065" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvilken gruppe borgere blev i tusindtal hjulpet med at flygte fra Danmark til Sverige i oktober 1943?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14066" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Danske kommunister</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14067" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Danske soldater</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14068" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Danske j&#248;der</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Danske j&#248;der</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14069" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvem beslutter, om der skal v&#230;re valg til Folketinget inden valgperiodens udl&#248;b?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14070" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Indenrigsministeren</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14071" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Statsministeren</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14072" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Folketingets formand</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Statsministeren</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14073" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvem er den lovgivende, den ud&#248;vende og den d&#248;mmende magt fordelt mellem?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14074" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Folketinget, regeringen og domstolene</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14075" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Folketinget, kommunerne og domstolene</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14076" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Regeringen, regionerne og kommunerne</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Folketinget, regeringen og domstolene</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14077" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvad indeb&#230;rer den politiske aftale Nationalt kompromis om dansk sikkerhedspolitik fra marts 2022 blandt andet?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14078" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>At udgifterne til forsvaret for&#248;ges</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14079" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>At udgifterne til forsvaret fastholdes</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14080" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>At udgifterne til forsvaret reduceres</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : At udgifterne til forsvaret for&#248;ges</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14081" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvilket &#229;r blev Dansk Folkeparti valgt til Folketinget f&#248;rste gang?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14082" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>1958</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14083" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>1978</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14084" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>1998</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : 1998</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14085" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvad hedder F&#230;r&#248;ernes st&#248;rste by?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14086" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Reykjavik</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14087" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Nuuk</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14088" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>T&#243;rshavn</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : T&#243;rshavn</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14089" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvorn&#229;r blev Danmark ramt af pest-epidemien Den Sorte D&#248;d, som slog en stor del af befolkningen ihjel?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14090" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>I 1300-tallet</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14091" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>I 1600-tallet</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14092" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>I 1900-tallet</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : I 1300-tallet</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14093" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Deltager Danmark i EU’s forsvars- og sikkerhedspolitik?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14094" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Ja</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14095" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Nej</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Ja</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14096" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvem skrev romanerne Pelle Erobreren og Ditte Menneskebarn i begyndelsen af 1900-tallet?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14097" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Steen Steensen Blicher</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14098" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Martin Andersen Nex&#248;</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14099" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Klaus Rifbjerg</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Martin Andersen Nex&#248;</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14100" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvilken dansk arkitekt har tegnet operahuset i Sydney i Australien?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14101" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Dorte Mandrup</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14102" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>J&#248;rn Utzon</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14103" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Arne Jacobsen</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : J&#248;rn Utzon</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14104" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvilket af f&#248;lgende omr&#229;der har staten ansvaret for driften af?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14105" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Politiet</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14106" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>B&#248;rnehaver</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14107" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Sygehuse</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Politiet</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14108" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvorn&#229;r gjorde en st&#248;rre gruppe af unge opr&#248;r mod samfundets traditionelle normer?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14109" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>I slutningen af 1920’erne</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14110" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>I slutningen af 1940’erne</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14111" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>I slutningen af 1960’erne</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : I slutningen af 1960’erne</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14112" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Er Gr&#248;nland og F&#230;r&#248;erne en del af EU?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14113" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Ja</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14114" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Nej</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Nej</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14115" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvilken historisk begivenhed fandt sted i 1864?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14116" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Danmark tabte Den 2. Slesvigske Krig</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14117" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Danmark fik sin f&#248;rste socialdemokratiske statsminister</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14118" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Danske kvinder fik valgret til Folketinget</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Danmark tabte Den 2. Slesvigske Krig</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14119" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvilket af f&#248;lgende lande har Danmark st&#248;rst samhandel (import og eksport) med?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14120" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Kina</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14121" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Tyskland</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14122" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Storbritannien</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Tyskland</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14123" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Kan den samme person v&#230;re statsminister i mere end to valgperioder?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14124" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Ja</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14125" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Nej</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Ja</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14126" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvorn&#229;r tr&#229;dte Danmarks Riges Grundlov i kraft?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14127" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>1809</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14128" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>1849</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14129" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>1889</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : 1849</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14130" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvor ofte afholdes der kommunalvalg?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14131" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Hvert tredje &#229;r</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14132" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Hvert fjerde &#229;r</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14133" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Hvert femte &#229;r</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Hvert fjerde &#229;r</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14134" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvor ligger Danmarks h&#248;jeste naturlige punkt?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14135" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>I Nordsj&#230;lland</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14136" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>I S&#248;nderjylland</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14137" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>I &#216;stjylland</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : I &#216;stjylland</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14138" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvem var Danmarks f&#248;rste kvindelige statsminister?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14139" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Margrethe Vestager</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14140" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Helle Thorning-Schmidt</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14141" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Mette Frederiksen</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Helle Thorning-Schmidt</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14142" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvilken befolkningsgruppe fik begr&#230;nset deres rettigheder med indf&#248;relsen af stavnsb&#229;ndet i 1733?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14143" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Borgerskabet</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14144" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>B&#248;nderne</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14145" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Adelen</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : B&#248;nderne</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14146" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvilken instans har som sin prim&#230;re opgave at kontrollere offentlige myndigheders sagsbehandling?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14147" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Etisk R&#229;d</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14148" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Folketingets Ombudsmand</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14149" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Pressen&#230;vnet</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Folketingets Ombudsmand</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14150" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvilken international organisation har vedtaget 17 s&#229;kaldte verdensm&#229;l om for eksempel ligestilling, klima og fattigdom?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14151" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>FN</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14152" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>EU</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14153" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>WTO</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : FN</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14154" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvilken popgruppe udgav nummeret Barbie Girl i 1990’erne?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14155" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Whigfield</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14156" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Me &amp; My</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14157" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Aqua</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Aqua</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14158" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvordan har dagpengeperioden for arbejdsl&#248;se udviklet sig siden 1994?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14159" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Den er blevet l&#230;ngere</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14160" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Den er u&#230;ndret</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14161" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Den er blevet kortere</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Den er blevet kortere</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14162" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvilken dansk cykelrytter vandt Tour de France i 2022?</p>
+                        
+                            <span class="d-inline-block my-2 px-2 rounded bg-success font-size-sm text-uppercase text-white">Potential new question</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14163" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Magnus Cort</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14164" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Mads Pedersen</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14165" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Jonas Vingegaard</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Jonas Vingegaard</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14166" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvilken tidligere minister stiftede partiet Danmarksdemokraterne i juni 2022?</p>
+                        
+                            <span class="d-inline-block my-2 px-2 rounded bg-success font-size-sm text-uppercase text-white">Potential new question</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14167" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Inger St&#248;jberg</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14168" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Sophie L&#248;hde</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14169" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>S&#248;ren Gade</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Inger St&#248;jberg</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14170" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">I hvilket farvand skete der t&#230;t p&#229; Danmarks kyst store udslip af gas fra gasledningerne Nord Stream 1 og Nord Stream 2?</p>
+                        
+                            <span class="d-inline-block my-2 px-2 rounded bg-success font-size-sm text-uppercase text-white">Potential new question</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14171" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Nords&#248;en</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14172" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>&#216;sters&#248;en</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14173" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Kattegat</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : &#216;sters&#248;en</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14174" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvor h&#248;j var valgdeltagelsen ved folketingsvalget i november 2022?</p>
+                        
+                            <span class="d-inline-block my-2 px-2 rounded bg-success font-size-sm text-uppercase text-white">Potential new question</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14175" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Cirka 45 procent</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14176" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Cirka 65 procent</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14177" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Cirka 85 procent</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Cirka 85 procent</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14178" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Hvor skete der et skudangreb den 3. juli 2022?</p>
+                        
+                            <span class="d-inline-block my-2 px-2 rounded bg-success font-size-sm text-uppercase text-white">Potential new question</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14179" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>I shoppingcenteret Fields</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14180" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>I K&#248;benhavns Lufthavn</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14181" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>P&#229; Hotel Bella Sky</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : I shoppingcenteret Fields</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14182" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Kan man if&#248;lge dansk lov blive straffet med f&#230;ngsel, hvis man ulovligt tvinger nogen til en religi&#248;s vielse?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14183" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Ja</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14184" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Nej</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Ja</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14185" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Er det if&#248;lge dansk lov lovligt at have samleje med en person under 15 &#229;r, hvis personen har givet samtykke til samlejet</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14186" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Ja</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14187" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Nej</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Nej</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14188" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Er det if&#248;lge dansk lov tilladt at sl&#229; sin &#230;gtef&#230;lle?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14189" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Ja</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14190" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Nej</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Nej</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14191" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Er det muligt for en person over 18 &#229;r at f&#229; et CPR-nr., der svarer til et andet k&#248;n (skifte juridisk k&#248;n)?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14192" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Ja</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14193" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Nej</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Ja</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+            <question id="14194" time="15" event="">
+                <text id="question" margin-bottom="30" anim="left" animtime="0.5">
+
+                    <![CDATA[
+
+                        <p class="p_24 text-center">Kan man if&#248;lge dansk lov kr&#230;ve, at sv&#248;mmehaller har separate &#229;bningstider for kvinder og m&#230;nd?</p>
+                        
+                                <span class="d-inline-block my-2 px-2 rounded bg-danger font-size-sm text-uppercase text-white">Appeared in 1 tests</span>
+
+                        
+                    ]]>
+
+                </text>
+                    <!--option 1 -->
+                    <option id="14195" correct='false'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Ja</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+                    <!--option 1 -->
+                    <option id="14196" correct='true'>
+                        <text margin-bottom="5" anim="show" animtime="0.5" animdelay="0.5" event="optionover,selectandsubmit" class="optionBox">
+
+                            <![CDATA[
+
+                            <p>Nej</p>
+
+                            ]]>
+
+                        </text>
+                    </option>
+
+                <!-- feedbacks -->
+                <fb id="pass" event="">
+                    <text anim="none" margin-top="30" margin-bottom="30"><![CDATA[<p class="p_24 text-center"><i class="fa fa-fw fa-2x fa-check-circle text-success"></i></p>]]></text>
+                    <button margin-bottom="30" anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+
+                <fb id="fail" event="">
+                    <text anim="show" margin-top="30" margin-bottom="30">
+                                    <![CDATA[
+
+                                    <p class="p_24 text-center">
+                                        <i class="fa fa-fw fa-2x fa-times-circle text-danger"></i>
+                                    </p>
+                                    <p><b>The correct answer is : Nej</b></p>
+
+                                    
+
+                                    ]]>
+                    </text>
+                    <button anim="none" event="btnover,loadNextQuestion"><![CDATA[Try the next one]]></button>
+                </fb>
+            </question>
+
+
+
+
+        <!--generic timeout text-->
+        <timeout>
+            <image margin-bottom="30" anim="top" animtime="1" animdelay="0.3" ease="Bounce.easeOut" src="http://www.placehold.it/800x500" />
+
+            <text margin-bottom="30" anim="top" animtime="1" animdelay="0.2" ease="Bounce.easeOut"><![CDATA[<p class="p_42 grey">Times up!</p>]]></text>
+
+            <button margin-bottom="30" anim="top" animtime="1" animdelay="0.1" ease="Bounce.easeOut" event="btnover,restart"><![CDATA[Start again]]></button>
+        </timeout>
+
+
+        <!--score screen-->
+        <score masteryscore="80" quizId="14025" quizName="Indf&#248;dsretspr&#248;ven November 2022">
+            <pass event="sendResult">
+                
+
+                        <image margin-bottom="30" anim="top" animtime="1" animdelay="0.3" ease="Bounce.easeOut" src="https://wcb.azurewebsites.net/media/1143/khaled-genius.gif" />
+
+
+                <text margin-bottom="30" anim="top" animtime="1" animdelay="0.2" ease="Bounce.easeOut"><![CDATA[<p class="p_30">CONGRATULATIONS!</p><p class="p_24">You scored [score]%</p>]]></text>
+
+                
+
+                <button margin-bottom="30" anim="top" animtime="1" animdelay="0.1" ease="Bounce.easeOut" event="btnover,restart"><![CDATA[Play again?]]></button>
+
+                <text margin-bottom="30" anim="top" animtime="1" animdelay="0.2" ease="Bounce.easeOut">
+
+                    <![CDATA[
+                    <div class="block-content block-content-full">
+                        <div class="row">
+                            <div class="col-6">
+
+                                    <a href="/indfoedsretsproeven/exams/indfoedsretsproeven-may-2023/" class="btn btn-sm btn-primary btn-block" onclick="gtag('event', 'Click', {'event_category': 'Button','event_label': 'Previous quiz : Indf&#248;dsretspr&#248;ven May 2023'});">Previous quiz</a>
+
+                            </div>
+                            <div class="col-6">
+
+                                    <a href="/indfoedsretsproeven/exams/indfoedsretsproeven-june-2022/" class="btn btn-sm btn-primary btn-block" onclick="gtag('event', 'Click', {'event_category': 'Button','event_label': 'Next quiz : Indf&#248;dsretspr&#248;ven June 2022'});">Next quiz</a>
+
+                            </div>
+                        </div>
+                        
+
+                    </div>]]>
+
+
+
+                </text>
+
+            </pass>
+
+            <fail event="sendResult">
+                
+
+                        <image margin-bottom="30" anim="top" animtime="1" animdelay="0.3" ease="Bounce.easeOut" src="https://wcb.azurewebsites.net/media/1037/dj-khaled-never.gif" />
+
+
+                <text margin-bottom="30" anim="top" animtime="1" animdelay="0.2" ease="Bounce.easeOut"><![CDATA[<p class="p_32">Bad luck! You scored [score]%</p><p class="p_24">Why not have another go?</p>]]></text>
+
+                
+
+                <button margin-bottom="30" anim="top" animtime="1" animdelay="0.1" ease="Bounce.easeOut" event="btnover,restart"><![CDATA[Play again?]]></button>
+            </fail>
+        </score>
+    </custom>
+
+    <!--progress bar and footer elements have reserved ids. They are optional elements and can be moved or removed if not required-->
+    <!--progress bar and footer elements have reserved ids. They are optional elements and can be moved or removed if not required-->
+<div id="quiz_footer" margin-top="30" height="47" anim="hide" width="100%" text-align="center">
+    <div id="quiz_progress_outer" style="height:10px" class="progress push">
+        <div id="quiz_progress_inner" style="height:10px" class="progress-bar progress-bar-striped progress-bar-animated bg-success"></div>
+    </div>
+    <text id="footer_score" float="left" margin-top="13" width="33.33%"><![CDATA[<p style="float:left">Score 0/[score]]</p>]]></text>
+    <text id="footer_page" float="left" margin-top="13" width="33.33%"><![CDATA[<p>Question [current]]/[total]]</p>]]></text>
+    <text id="footer_next" float="left" margin-top="5" text-align="right" width="33.33%"><![CDATA[]]></text>
+</div>
+
+</data>
